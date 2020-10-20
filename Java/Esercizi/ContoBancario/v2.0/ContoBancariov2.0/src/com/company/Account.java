@@ -32,15 +32,9 @@ public class Account {
     }
 
     public void interessi(int perc){
-        int num;
-        num = (perc / 100) * (this.numAccount);
-        if(this.amount < 0){
-            this.amount -= num;
-        }
-        else{
-            this.amount += num;
-        }
+        this.amount = this.amount + (this.amount / 100 * perc);
     }
+    
     public void contiGest(int cost){
         this.amount -= cost;
     }

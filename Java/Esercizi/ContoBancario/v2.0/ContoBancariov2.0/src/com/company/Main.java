@@ -21,14 +21,24 @@ public class Main {
             if(mese < 0){
                 System.out.println("Il mese non puo essere minore di 1");
             }
-        }while (mese < 1);
+        }while (mese < 1 || mese > 12);
 
         System.out.println("----------CONTO NUMERO 1-----");
-        load(name, numAccount, amount);
+        System.out.print("Inserisci il nome: ");
+        name = scanner.next();
+        System.out.print("Inserisci il numero dell'account: ");
+        numAccount = scanner.nextInt();
+        System.out.print("Inseirsci il saldo attuale: ");
+        amount = scanner.nextInt();
         Account conto1 = new Account(name, numAccount, amount);
 
         System.out.println("----------CONTO NUMERO 2-----");
-        load(name, numAccount, amount);
+        System.out.print("Inserisci il nome: ");
+        name = scanner.next();
+        System.out.print("Inserisci il numero dell'account: ");
+        numAccount = scanner.nextInt();
+        System.out.print("Inseirsci il saldo attuale: ");
+        amount = scanner.nextInt();
         Account conto2 = new Account(name, numAccount, amount);
 
         do {
@@ -44,15 +54,6 @@ public class Main {
                     break;
             }
         }while (n != 0);
-    }
-
-    public static void load(String name, int numAccount, int amount){
-        System.out.print("Inserisci il nome: ");
-        name = scanner.next();
-        System.out.print("Inserisci il numero dell'account: ");
-        numAccount = scanner.nextInt();
-        System.out.print("Inseirsci il saldo attuale: ");
-        amount = scanner.nextInt();
     }
 
     public static void operation(Account conto, int mese, int perc, int costoGest){
