@@ -7,13 +7,13 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String name = "name";
-        int numAccount = 0;
-        int amount = 0;
+        String name;
+        int numAccount;
+        int amount;
         int n;
         int mese;
         int percInt = 5;
-        int costoGest = 500;
+        int costoGest = 200;
 
         do {
             System.out.print("In che mese ti trovi: ");
@@ -23,7 +23,7 @@ public class Main {
             }
         }while (mese < 1 || mese > 12);
 
-        System.out.println("----------CONTO NUMERO 1-----");
+        System.out.println("----------CONTO NUMERO 1----------");
         System.out.print("Inserisci il nome: ");
         name = scanner.next();
         System.out.print("Inserisci il numero dell'account: ");
@@ -32,7 +32,7 @@ public class Main {
         amount = scanner.nextInt();
         Account conto1 = new Account(name, numAccount, amount);
 
-        System.out.println("----------CONTO NUMERO 2-----");
+        System.out.println("----------CONTO NUMERO 2----------");
         System.out.print("Inserisci il nome: ");
         name = scanner.next();
         System.out.print("Inserisci il numero dell'account: ");
@@ -59,7 +59,7 @@ public class Main {
     public static void operation(Account conto, int mese, int perc, int costoGest){
         int r;
         do {
-            System.out.println("Cosa vuoi fare? \n1. Saldo\n2. Preleva\n3. Deposita\n4. Show Info\n5. Aumenta di mese\n0. Exit");
+            System.out.println("MESE NUM. " + mese + "\n1. Saldo\n2. Preleva\n3. Deposita\n4. Show Info\n5. Aumenta di mese\n0. Exit");
             r = scanner.nextInt();
             switch (r){
                 case 1:
@@ -81,7 +81,7 @@ public class Main {
 
                     if(mese == 12){
                         conto.contiGest(costoGest);
-                        System.out.println("HAI PAGATO IL COSTO PER LA GESTIONE DEL CONTO = " + costoGest);
+                        System.out.println("HAI PAGATO IL COSTO PER LA GESTIONE DEL CONTO = - " + costoGest);
                         mese = 1;
                     }
                     break;
