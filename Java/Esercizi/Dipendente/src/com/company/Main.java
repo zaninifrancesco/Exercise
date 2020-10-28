@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -7,23 +8,72 @@ public class Main {
     public static void main(String[] args) {
         float salario;
         String nome;
-        String ruolo;
+        int ruolo;
+        String dipartimento;
+        int id;
 
         salario = scan.nextFloat();
         nome = scan.next();
-        ruolo = scan.next();
+        ruolo = scan.nextInt();
+        dipartimento = scan.next();
+        id = scan.nextInt();
+        dipendente dipendente = new dipendente(salario, nome, ruolo, dipartimento, id);
 
-        dipendente epico = new dipendente(salario, nome, ruolo);
+        salario = scan.nextFloat();
+        nome = scan.next();
+        ruolo = scan.nextInt();
+        dipartimento = scan.next();
+        id = scan.nextInt();
+        dipendente dipendente1 = new dipendente(salario, nome, ruolo, dipartimento, id);
+        int sel;
 
-        if(epico.getRuolo().equals("Dirigente")){
-            System.out.println("EPICOSISSIMO");
-            epico.modificaStipendio(20);
-        }
-        else{
-            epico.modificaStipendio(10);
-        }
-        System.out.println("STIPENDIO ORA: " + epico.getSalario());
+        do{
+            System.out.println("Su quale dipendente vuoi operare: \n1. " + dipendente.getNome() + "\n2. " + dipendente1.getNome() + "\n3. MEDIA");
+            sel = scan.nextInt();
+
+            switch (sel){
+                case 1:
+                    operazioni(dipendente);
+                    break;
+                case 2:
+                    operazioni(dipendente1);
+                    break;
+                case 3:
+                    float media = (dipendente.getStipendio() + dipendente1.getStipendio() / 2);
+                    System.out.println("La media tra " + dipendente.getStipendio() + " e " + dipendente1.getStipendio() + " = " + media);
+
+            }
+
+        }while(sel != 0);
 
 
     }
+
+    public static void operazioni(dipendente dip){
+        int r;
+        do{
+            System.out.println("Cosa vuoi fare?\n1. Cambiare il dipartimento\n2. Aumentare lo stipendio\n3. Show info");
+            r = scan.nextInt();
+            switch (r){
+                case 1:
+                    if(Objects.equals(dip.getDipartimento(), "Amministrazione")){
+                        dip.cambiaDipartimento();
+                    }
+                    else{
+                        System.out.println("NON E' AMMINISTRAZIONE");
+                    }
+                    break;
+                case 2:
+                    if(dip.getRuolo() > 10){
+                        dip.aumentaStipendio(10);
+                    }
+                    else{
+                        dip.aumentaStipendio(20);
+                    }
+                case 3:
+                    dip.showInfo();
+            }
+        }while (r != 0);
+    }
+
 }

@@ -1,32 +1,48 @@
 package com.company;
 
 public class dipendente {
-    private float salario;
-    private String nome;
-    private String ruolo;
 
-    public dipendente(float salario, String name, String role){
+    private String nome;
+    private String dipartimento;
+    private float stipendio;
+    private int numeroId;
+    private int ruolo;
+
+    public dipendente(float salario, String name, int role, String dipartimento, int id){
         this.nome = name;
         this.ruolo = role;
-        this.salario = salario;
+        this.stipendio = salario;
+        this.dipartimento = dipartimento;
+        this.numeroId = id;
     }
 
-    public float getSalario(){
-        return this.salario;
+
+    public void cambiaDipartimento(){
+        this.dipartimento = "Bababuoei";
     }
 
-    public String getNome(){
-        return this.nome;
-    }
-
-    public String getRuolo(){
-        return this.ruolo;
-    }
-
-    public void modificaStipendio(float perc){
+    public void aumentaStipendio(float perc){
         float temp;
-        temp = (perc / 100) * this.salario;
-        this.salario += temp;
+        temp = (perc / 100) * this.stipendio;
+        this.stipendio += temp;
     }
 
+    public void showInfo(){
+        System.out.println("NOME: " + this.nome + "\nSALDO: " + this.stipendio + "\nDIPARTIMENTO: " + this.dipartimento + "\nID: " + this.dipartimento + "\nRUOLO: " + this.numeroId);
+    }
+    public String getDipartimento() {
+        return dipartimento;
+    }
+
+    public float getStipendio() {
+        return stipendio;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getRuolo() {
+        return ruolo;
+    }
 }
