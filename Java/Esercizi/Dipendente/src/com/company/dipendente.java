@@ -30,6 +30,7 @@ public class dipendente {
     public void showInfo(){
         System.out.println("NOME: " + this.nome + "\nSALDO: " + this.stipendio + "\nDIPARTIMENTO: " + this.dipartimento + "\nID: " + this.dipartimento + "\nRUOLO: " + this.numeroId);
     }
+
     public String getDipartimento() {
         return dipartimento;
     }
