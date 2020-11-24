@@ -13,7 +13,7 @@ public class Contakilometri {
     }
 
     public String lettura(){
-        return "Si sono percorsi " + this.kmTraveled + ". ";
+        return "Si sono percorsi " + this.kmTraveled + " km. ";
     }
 
     public float getKmTraveled() {
