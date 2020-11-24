@@ -4,11 +4,11 @@ public class Contakilometri {
 
     private float kmTraveled;
 
-    public Contakilometri(int km){
-        this.kmTraveled = km;
+    public Contakilometri(){
+        this.kmTraveled = 0;
     }
 
-    public void incrementa(int km){
+    public void incrementa(float km){
         this.kmTraveled += km;
     }
 
@@ -16,4 +16,7 @@ public class Contakilometri {
         return "Si sono percorsi " + this.kmTraveled + ". ";
     }
 
+    public float getKmTraveled() {
+        return kmTraveled;
+    }
 }

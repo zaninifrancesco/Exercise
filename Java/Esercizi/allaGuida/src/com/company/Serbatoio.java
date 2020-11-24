@@ -3,6 +3,7 @@ package com.company;
 public class Serbatoio {
     private float fuelAmount;
     private float max = 100;
+
     public Serbatoio(float fuelQuantity){
         this.fuelAmount = fuelQuantity;
     }

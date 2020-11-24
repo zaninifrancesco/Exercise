@@ -1,20 +1,27 @@
 package com.company;
 
 public class Motore {
-    private float consumo;
+    private float kmL;
+    private boolean status;
 
-
-    public void calcolaConsumo(float km, float litri){
-        this.consumo = km / litri;
+    public Motore(float km){
+        this.kmL = km;
+        this.status = false;
     }
 
-
-    public float getConsumo() {
-
-        return consumo;
+    public float getKmL() {
+        return kmL;
     }
 
-    public void setConsumo(float consumo){
-        this.consumo = consumo;
+    public void setKmL(float kmsulitro){
+        this.kmL = kmsulitro;
     }
+
+    public boolean getStatus(){
+        return this.status;
+    }
+    public void setStatus(boolean newStatus){
+        this.status = newStatus;
+    }
+
 }
