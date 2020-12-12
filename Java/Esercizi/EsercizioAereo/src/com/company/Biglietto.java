@@ -19,7 +19,11 @@ public class Biglietto {
     }
 
     public String showInfo(){
-        return "LOCALITA: " + this.localita + "\nDATA: " + this.data + "\nAEREO: " + aereo.getId();
+        String mess = "LOCALITA: " + this.localita + "\nDATA: " + this.data + "\nAEREO: " + aereo.getId();
+        if(aereo.getCompagniaAerea() != null){
+            mess += "\nCompagnia: " + aereo.getCompagniaAerea();
+        }
+        return mess;
     }
 
     public String getLocalita() {

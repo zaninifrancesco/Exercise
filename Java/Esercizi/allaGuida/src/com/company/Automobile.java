@@ -4,24 +4,45 @@ public class Automobile {
 
     private Motore motore;
     private Contakilometri contakilometri;
-    private Automobile auto;
     private Serbatoio serbatoio;
-    private Boolean isOn = false;
 
-    public void setConsumo(float consumo){
-        motore.setConsumo(consumo);
+
+    public Automobile(Motore motore, Contakilometri ckm, Serbatoio serbatoio){
+        this.motore = motore;
+        this.contakilometri = ckm;
+        this.serbatoio = serbatoio;
     }
 
-    public void riempiBenzina(){
+    public void accendi(){
+        motore.setStatus(true);
+    }
+
+    public void spegni(){
+        motore.setStatus(false);
+    }
+
+    public boolean getStatus(){
+        return motore.getStatus();
+    }
+
+    public void viaggia(float km){
+        contakilometri.incrementa(km);
+        float consumo = km / motore.getKmL();
+        serbatoio.consuma(consumo);
+    }
+
+    public void rifornisciBenzina(float quantitaBenzina){
+        serbatoio.rifornisci(quantitaBenzina);
+    }
+
+    public void faiPieno(){
         serbatoio.riempiSerbatoio();
     }
 
-    public void accendere(){
-        this.isOn = true;
+    public String stradaPercorsa(){
+        return contakilometri.lettura();
     }
-    public void viaggia(int km){
-        contakilometri.incrementa(km);
-
+    public void setKm(float km){
+        motore.setKmL(km);
     }
-
 }
