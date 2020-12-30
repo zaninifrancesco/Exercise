@@ -19,4 +19,20 @@ public class Shelf {
             isFull = true;
         }
     }
+
+    public boolean isFull(){
+        return isFull;
+    }
+
+    public int getNumBooks(){
+        return numBooks;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Book[] getBooks() {
+        return books;
+    }
 }
