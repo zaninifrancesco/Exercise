@@ -1,36 +1,38 @@
 #include <stdio.h>
 
+//righe colonne
 
+void assignRes(int nProc, int assignedRes[][100]){
+    for(int i = 0; i < nProc; i++){
+        for(int j = 0; j < 3; j++){
+            printf("%s\n", "Risorsa numero %d del processo numero %d = ", j + 1, i + 1);
+            scanf("%d\n", &assignedRes[j][i]);
+        }
+    }
+}
 
-
-// disp = rtot(a)(b) - assegnate(a)(b)
-void loadResTot(int resTot(3)){
-  for(int i = 0; i < 3; i++){
-    printf("%s\n","Inserire resTot");
-    scanf("%d", &resTot[i]);
-  }
-
-void assignRes(int ass[][])
-
-
+void maxResources(int nProc, int maxRes[][100]){
+    for(int i = 0; i < nProc; i++){
+        for(int j = 0; j < 3; i++){
+            printf("%s\n", "Risorsa MAX numero %d del processo numero %d = ", j + 1, i + 1);
+            scanf("%d\n", &maxRes[j][i]);
+        }
+    }
 }
 
 int main() {
-  int nProc;
 
-  int max[nProc][3];
-  int needed[nProc][3];
-  int assigned[nProc][3];
-  int rTot[3];
-  int available[3];
+    int nProc = 0;
 
+    printf("%s\n", "Inserire il numero di processi: ");
+    scanf("%d\n", &nProc);
 
+    int assignedRes[3][100];
+    int neededRes[3][100];
+    int availableRes[3][100];
+    int maxRes[3][100];
+    int safeStatus[100];
 
-  printf("%s\n", "Inserire il numero dei processi: ");
-  scanf("%d", &nProc);
-
-  loadResTot(rTot);
-
-
-  return 0;
+    assignRes(nProc, assignedRes);
+    maxResources(nProc, maxRes);
 }
