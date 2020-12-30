@@ -4,14 +4,15 @@ public class Shelf {
     private int numBooks = 0;
     private int id;
     private boolean isFull = false;
-    private Book[] books = new Book[10];
+    private Book[] books;
 
-    public Shelf(int identifier){
+    public Shelf(int identifier, int nMax){
         this.id = identifier;
+        books = new Book[nMax];
     }
 
     public void addBook(Book book){
-        if(numBooks < books.length){
+        if(numBooks < books.length - 1){
             books[numBooks] = book;
             numBooks++;
         }
