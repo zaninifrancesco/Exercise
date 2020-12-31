@@ -45,9 +45,12 @@ public class Main {
                     System.out.print("Enter the title of book which you want to see the info: ");
                     int page = scan.nextInt();
                     //TODO: ARRAY SEARCHING ALGORITHM
+
                     break;
                 case 4:
-                    //TODO: ARRAY SORTING ALGORITHM
+                    shelf.sortBooks();
+                    System.out.println("Shelf successfully sorted!");
+                    break;
                 case 5:
                     if(shelf.getNumBooks() != 0) {
                         for (int i = 0; i < shelf.getNumBooks(); i++) {
