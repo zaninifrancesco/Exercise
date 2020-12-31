@@ -41,11 +41,10 @@ public class Main {
                 case 2:
                     System.out.println("There are " + shelf.getNumBooks() + " books in the shelf");
                     break;
-                case 3:
+                case 3:                                                                                 //IT DOESN'T WORK
                     System.out.print("Enter the title of book which you want to see the info: ");
-                    int page = scan.nextInt();
-                    //TODO: ARRAY SEARCHING ALGORITHM
-
+                    String title = scan.next();
+                    System.out.println(shelf.search(title));
 
                     break;
                 case 4:
