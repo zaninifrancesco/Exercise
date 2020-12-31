@@ -12,7 +12,7 @@ public class Shelf {
     }
 
     public void addBook(Book book){
-        if(numBooks < books.length - 1){
+        if(numBooks < books.length){
             books[numBooks] = book;
             numBooks++;
         }
