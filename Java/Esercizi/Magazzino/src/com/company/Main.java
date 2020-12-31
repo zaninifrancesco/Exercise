@@ -46,20 +46,15 @@ public class Main {
                     int page = scan.nextInt();
                     //TODO: ARRAY SEARCHING ALGORITHM
 
+
                     break;
                 case 4:
                     shelf.sortBooks();
                     System.out.println("Shelf successfully sorted!");
                     break;
                 case 5:
-                    if(shelf.getNumBooks() != 0) {
-                        for (int i = 0; i < shelf.getNumBooks(); i++) {
-                            System.out.println(shelf.getBooks()[i].showInfo());
-                        }
-                    }
-                    else {
-                        System.out.println("Shelf's empty");
-                    }
+                    shelf.showInfo();
+                    break;
             }
         }while ( r != 6);
     }
