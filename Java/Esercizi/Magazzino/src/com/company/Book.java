@@ -26,4 +26,16 @@ public class Book {
     public String showInfo(){
         return "Book title: " + this.title + "\nBook pages: " + this.numPages + "\nBook genre: " + this.genre;
     }
+
+    public void setNumPages(int num){
+        this.numPages = num;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
