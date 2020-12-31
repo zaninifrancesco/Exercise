@@ -63,4 +63,15 @@ public class Shelf {
         }
 
     }
+
+    public void showInfo(){
+        if(numBooks != 0){
+            for(int i = 0; i < numBooks; i++){
+                System.out.println(books[i].showInfo());
+            }
+        }
+        else{
+            System.out.println("Shelf's empty");
+        }
+    }
 }
