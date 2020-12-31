@@ -74,4 +74,20 @@ public class Shelf {
             System.out.println("Shelf's empty");
         }
     }
+
+    public String search(String title){
+        String msg = "Nothing Found";
+        int i = 0;
+        boolean hasBeenFound = false;
+        while(!hasBeenFound || i < numBooks){
+            if(books[i].getTitle().equals(title)){
+                msg = books[i].showInfo();
+                hasBeenFound = true;
+            }
+            else{
+                i++;
+            }
+        }
+        return msg;
+    }
 }
