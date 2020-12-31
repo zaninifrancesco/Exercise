@@ -1,10 +1,18 @@
+/*
+Classe Shelf.
+In questa classe è contenuto l'array di oggetti books di tipo Book
+L'array di oggetti viene inizializzato nel costruttore con dimensiome max data come parametro
+E' possibile aggiungere un libro finchè c'è spazio, ordinare i libri in base alle pagine
+ */
+
+
 package com.company;
 
 public class Shelf {
     private int numBooks = 0;
     private int id;
     private boolean isFull = false;
-    private Book[] books;           //array di oggetti di tipo Book
+    private Book[] books;           //Dichiarazione array di oggetti di tipo Book
 
     public Shelf(int identifier, int nMax){
         this.id = identifier;

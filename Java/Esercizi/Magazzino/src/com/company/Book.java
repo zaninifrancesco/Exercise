@@ -1,8 +1,13 @@
+/*
+Classe Book
+
+ */
+
 package com.company;
 
 public class Book {
     private int numPages;
-    private String title;
+    private String title; //dichiarazione degli attributi
     private String genre;
 
     public Book(int nPages, String bookTitle, String bookGenre){
