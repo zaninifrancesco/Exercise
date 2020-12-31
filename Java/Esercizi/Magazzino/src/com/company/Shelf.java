@@ -4,16 +4,16 @@ public class Shelf {
     private int numBooks = 0;
     private int id;
     private boolean isFull = false;
-    private Book[] books;
+    private Book[] books;           //array di oggetti di tipo Book
 
     public Shelf(int identifier, int nMax){
         this.id = identifier;
-        books = new Book[nMax];
+        books = new Book[nMax];     //inizializzazione dell'array con dimensione nMax
     }
 
     public void addBook(Book book){
         if(numBooks < books.length){
-            books[numBooks] = book;
+            books[numBooks] = book;     //controlla se c'è abbastanza spazio per inserire un nuovo oggetto libro e controlla se è pieno
             numBooks++;
         }
         else{
@@ -75,19 +75,18 @@ public class Shelf {
         }
     }
 
-    public String search(String title){
-        String msg = "Nothing Found";
+    public void search(String title){
         int i = 0;
         boolean hasBeenFound = false;
-        while(!hasBeenFound || i < numBooks){
-            if(books[i].getTitle().equals(title)){
-                msg = books[i].showInfo();
+        while(!hasBeenFound || i <= numBooks){
+            if(books[i].getTitle().equals(title)){      //Algoritmo per cercare un elemento in base al titolo dato come
+                                                        //Parametro della funzione
                 hasBeenFound = true;
             }
             else{
                 i++;
             }
         }
-        return msg;
+        System.out.println(books[i].showInfo());
     }
 }

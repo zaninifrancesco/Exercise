@@ -1,15 +1,26 @@
+/*
+CLASSE TEST,
+Questo programma consente di andare ad operare su uno scaffale con una selezione multipla aggiungendo libri
+e vedendone le informazioni principali come:
+- il numero delle pagine
+- il titolo
+- il genere del libro
+Consente inoltre di vedere le informazioni di tutti i libri o di un singolo libro
+e di ordinarli per numero di pagine attraverso un algoritmo di sorting
+ */
+
+
+
+
 package com.company;
 import java.util.Scanner;
 
-public class Main {
+public class Test {
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
 
         Shelf shelf = new Shelf(100, 3); //Istanza della classe scaffale
-
         int r;
-
-        System.out.println(shelf.getBooks().length);
 
         do{
             System.out.println("1. Add books to the shelf\n" +
@@ -41,11 +52,10 @@ public class Main {
                 case 2:
                     System.out.println("There are " + shelf.getNumBooks() + " books in the shelf");
                     break;
-                case 3:                                                                                 //IT DOESN'T WORK
+                case 3:
                     System.out.print("Enter the title of book which you want to see the info: ");
                     String title = scan.next();
-                    System.out.println(shelf.search(title));
-
+                    shelf.search(title);
                     break;
                 case 4:
                     shelf.sortBooks();
