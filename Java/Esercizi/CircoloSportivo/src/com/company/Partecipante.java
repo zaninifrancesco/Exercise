@@ -2,7 +2,7 @@ package com.company;
 
 public class Partecipante {
     private String nome;
-    private int rettaMensile;
+    private int rettaMensile = 0;
     private String[] discipline = new String[3];
     private int cont = 0;
     private boolean postoDisp = true;
