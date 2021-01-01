@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class Main {
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
+
         Circolo circolo = new Circolo(5);
-        Partecipante persona = new Partecipante("Francesco");
-        Partecipante persona1 = new Partecipante("Alessio");
 
         int r;
 
@@ -19,16 +18,29 @@ public class Main {
             r = scan.nextInt();
             switch (r){
                 case 1:
-                    //TODO: Aggiungi un partecipante
+                    String nome;
+                    System.out.print("Inserire il nome: ");
+                    nome = scan.next();
+                    circolo.aggiungiPart(new Partecipante(nome));
+                    System.out.println("Aggiunto correttamente");
                     break;
                 case 2:
                     //TODO: Aggiungi una disciplina a un singolo partecipnte
+                    System.out.print("Selezionare a cui si vuole aggiungere una disciplina: ");
+                    for(int i = 0; i < circolo.getContPart(); i++){
+                        System.out.println(circolo.getPartecipante()[i].getNome());
+                    }
+                    nome = scan.next();
                     break;
                 case 3:
-                    //TODO: Costo retta singolo part
+                    System.out.print("Inserisci il nome del partecipante di cui vuoi vedere la retta: ");
+                    nome = scan.next();
+                    System.out.print("La retta è di: " + circolo.vediRetta(nome));
                     break;
                 case 4:
-                    //TODO: Controlla se un partecipante è iscritto
+                    System.out.print("Inserire il nome per verificare se è iscritto alla lista: ");
+                    nome = scan.next();
+                    System.out.print(circolo.trovaNome(nome));
                     break;
             }
         }while(r != 0);
