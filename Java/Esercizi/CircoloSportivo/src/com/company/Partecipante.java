@@ -7,9 +7,8 @@ public class Partecipante {
     private int cont = 0;
     private boolean postoDisp = true;
 
-    public Partecipante(String nome, int retta){
+    public Partecipante(String nome){
         this.nome = nome;
-        this.rettaMensile = retta;
     }
 
     public boolean aggiungiDisciplina(String disc){

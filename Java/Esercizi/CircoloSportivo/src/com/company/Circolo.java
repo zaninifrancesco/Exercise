@@ -67,15 +67,13 @@ public class Circolo {
         return msg;
     }
 
-    public String stampaLista(String sport){
-        String msg = "";
-        for(int i = 0; i < contPart; i++){
-            for(int j = 0; j < 3; j++){
-                if(part[i].getDiscipline()[j].equals(sport)){
-                    msg += "Nome: " + part[i].getNome() + "\n";
+    public void stampaLista(String sport){
+        for(int i = 0; i < contPart; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (part[i].getDiscipline()[j].equals(sport)){
+                    System.out.println("Nome: " + part[i].getNome() + "\n");
                 }
             }
         }
-        return msg;
     }
 }
