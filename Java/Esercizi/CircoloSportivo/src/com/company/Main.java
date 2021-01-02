@@ -12,25 +12,30 @@ public class Main {
 
         do{
             System.out.println("1. Aggiungi un nuovo partecipante\n" +
-                               "2. Aggiungi una disciplina a un partecipante\n" +
+                               "2. Vedi tutti gli iscritti al circolo ad una certa disciplina\n" +
                                "3. Vedi il costo della retta di un partecipante\n" +
                                "4. Controlla se un partecipante è iscritto al circolo");
             r = scan.nextInt();
             switch (r){
                 case 1:
-                    String nome;
+                    String nome, sel;
                     System.out.print("Inserire il nome: ");
                     nome = scan.next();
                     circolo.aggiungiPart(new Partecipante(nome));
+                    System.out.print("Quante discipline pratica " + nome + ": ");
+                    int n = scan.nextInt();
+                    System.out.println("Nuoto\nGinnastica\nBodyBuilding");
+                    for(int i = 0; i < n; i++){
+                        sel = scan.next();
+                        circolo.getPartecipante()[circolo.getContPart()].aggiungiDisciplina(sel);
+                        circolo.calcolaCosto(circolo.getPartecipante()[circolo.getContPart()]);
+                    }
                     System.out.println("Aggiunto correttamente");
                     break;
                 case 2:
-                    //TODO: Aggiungi una disciplina a un singolo partecipnte
-                    System.out.print("Selezionare a cui si vuole aggiungere una disciplina: ");
-                    for(int i = 0; i < circolo.getContPart(); i++){
-                        System.out.println(circolo.getPartecipante()[i].getNome());
-                    }
-                    nome = scan.next();
+                    System.out.print("Inserire la disciplina: ");
+                    sel = scan.next();
+                    circolo.stampaLista(sel);
                     break;
                 case 3:
                     System.out.print("Inserisci il nome del partecipante di cui vuoi vedere la retta: ");
