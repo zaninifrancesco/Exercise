@@ -5,21 +5,16 @@ public class Partecipante {
     private int rettaMensile = 0;
     private String[] discipline = new String[3];
     private int cont = 0;
-    private boolean postoDisp = true;
 
     public Partecipante(String nome){
         this.nome = nome;
     }
 
-    public boolean aggiungiDisciplina(String disc){
+    public void aggiungiDisciplina(String disc){
         if(cont < discipline.length){
             discipline[cont] = disc;
             cont++;
         }
-        else{
-            postoDisp = false;
-        }
-        return postoDisp;
     }
 
     public String getNome(){
@@ -38,7 +33,4 @@ public class Partecipante {
         this.rettaMensile += costo;
     }
 
-    public boolean getPostoDisp() {
-        return postoDisp;
-    }
 }
