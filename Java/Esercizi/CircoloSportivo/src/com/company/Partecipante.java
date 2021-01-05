@@ -3,7 +3,7 @@ package com.company;
 public class Partecipante {
     private String nome;
     private int rettaMensile = 0;
-    private String[] discipline = new String[3];
+    private String[] discipline = new String[3];    //Array di stringhe di dimensione 3 tante quante sono le discipline possibili
     private int cont = 0;
 
     public Partecipante(String nome){
