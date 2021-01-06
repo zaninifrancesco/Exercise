@@ -45,7 +45,7 @@ public class Shelf {
         return books;
     }
 
-    public void sortBooks(){
+    public void sortBooks(){                                //Algoritmo di sort Selection Sort
         for(int i = 0; i < numBooks; i++){
             for(int j = 0; j < numBooks; j++){
                 if(books[i].getNumPages() > books[j].getNumPages()){
@@ -88,7 +88,7 @@ public class Shelf {
         boolean hasBeenFound = false;
         while(!hasBeenFound || i <= numBooks){
             if(books[i].getTitle().equals(title)){      //Algoritmo per cercare un elemento in base al titolo dato come
-                                                        //Parametro della funzione
+                                                        //parametro della funzione
                 hasBeenFound = true;
             }
             else{
