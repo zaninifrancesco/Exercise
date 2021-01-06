@@ -9,9 +9,6 @@ Consente inoltre di vedere le informazioni di tutti i libri o di un singolo libr
 e di ordinarli per numero di pagine attraverso un algoritmo di sorting
  */
 
-
-
-
 package com.company;
 import java.util.Scanner;
 
