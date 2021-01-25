@@ -69,7 +69,6 @@ public class Shelf {
                 }
             }
         }
-
     }
 
     public void showInfo(){
