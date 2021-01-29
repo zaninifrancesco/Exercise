@@ -2,7 +2,19 @@ package com.company;
 
 public class Tiktok extends Social{
 
-    public Tiktok(int numeroFollower, int numeroSeguiti, int nFotoPostate) {
+    private int nTiktok = 0;
+
+    public Tiktok(int numeroFollower, int numeroSeguiti) {
         super(numeroFollower, numeroSeguiti);
     }
+
+    public void postaUnTiktok(){
+        this.nTiktok++;
+    }
+
+    public int getnTiktok(){
+        return this.nTiktok;
+    }
+
+
 }
