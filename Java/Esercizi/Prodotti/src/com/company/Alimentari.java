@@ -15,6 +15,7 @@ public class Alimentari extends Prodotto {
 
     public void applicaSconto(Data dataAttuale){
         int perc = 5;
+
         if(dataScadenza.getDifference(dataAttuale) <= 10){
             perc = 20;
         }
