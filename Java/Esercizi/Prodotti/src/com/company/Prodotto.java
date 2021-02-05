@@ -1,12 +1,12 @@
 package com.company;
 
 public class Prodotto {
-    private int barCode;
-    private String descrizione;
-    private float prezzo;
+    protected int barCode;
+    protected String descrizione;
+    protected float prezzo;
 
-    public Prodotto(int codice, String descr, float price){
-        this.barCode = codice;
+    public Prodotto(String descr, float price){
+        //this.barCode = codice;
         this.descrizione = descr;
         this.prezzo = price;
     }
@@ -24,7 +24,7 @@ public class Prodotto {
         return this.prezzo;
     }
 
-    public void applicaSconto(int perc){
+    public void applicaSconto(float perc){
         this.prezzo -= (perc / 100) * this.prezzo;
     }
 

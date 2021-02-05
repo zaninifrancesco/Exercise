@@ -4,8 +4,8 @@ public class NonAlimentari extends Prodotto {
 
     private String materiale;
 
-    public NonAlimentari(int codice, String descr, float price, String mat){
-        super(codice, descr, price);
+    public NonAlimentari(String descr, float price, String mat){
+        super(descr, price);
         this.materiale = mat;
     }
 
@@ -14,7 +14,7 @@ public class NonAlimentari extends Prodotto {
         return this.materiale;
     }
 
-    public void applicaSconto(){
+    public void applicaScontx(){
         int perc = 5;
         if(materiale.equals("carta") || materiale.equals("vetro") || materiale.equals("plastica")){
             perc = 10;
