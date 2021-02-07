@@ -10,7 +10,6 @@ public class ListaSpesa {
     private Alimentari[] alimentari;    //Dichiarazione dei due array
     private NonAlimentari[] nonAlimentari;
     private int contAlim, contNonAlim = 0;
-    private boolean haTessera;  //attributo booleano per controllare se ha la tessera per applicare gli sconti
 
     public ListaSpesa(int maxProd){
         alimentari = new Alimentari[maxProd];   //Inizializzazione degli array data la dimensione max
@@ -49,13 +48,6 @@ public class ListaSpesa {
         return contNonAlim;
     }
 
-    public boolean haTessera() {
-        return haTessera;
-    }
-
-    public void setTessera(boolean haTessera) {
-        this.haTessera = haTessera;
-    }
 
     public String vediLista(){
         String msg = "";

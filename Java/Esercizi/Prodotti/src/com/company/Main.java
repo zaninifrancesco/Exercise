@@ -23,9 +23,9 @@ public class Main {
         int r = 0;
 
         System.out.println("Hai la carta fedelta?\n1. Si\n2. No");
-        int d = scan.nextInt();
+        int d = scan.nextInt();     //Controlla se il cliente ha la tessera fedeltà per applicare tutti gli sconti
 
-        lista.setTessera(d == 1);       //Controlla se il cliente ha la tessera fedeltà per applicare tutti gli sconti
+
 
         System.out.println("Inserisci la data di oggi: ");
         int g = scan.nextInt();
@@ -61,7 +61,7 @@ public class Main {
                     lista.aggiungiProd(new Alimentari(descr, prezzo, data));        //Richiamo il metodo per aggiungere un prodotto
                     System.out.println("Prodotto alimentare aggiunto correttamente!");
 
-                    if(lista.haTessera()){  //Controllo per vedere se ha la tessera per applicare gli sconti
+                    if(d == 1){  //Controllo per vedere se ha la tessera per applicare gli sconti
                         lista.getAlimentari()[lista.getContAlim() - 1].applicaScontx(dataOggi); //Applica lo sconto dell'ultimo prodotto aggiunto
 
                     }
@@ -77,7 +77,7 @@ public class Main {
                     lista.aggiungiProd(new NonAlimentari(descr, prezzo, mat));  //metodo per aggiungere un prodotto non alimentare
                     System.out.println("Prodotto non alimentare aggiunto correttamente!");
 
-                    if(lista.haTessera()){
+                    if(d == 1){
                         lista.getNonAlimentari()[lista.getContNonAlim() - 1].applicaScontx();
                     }
                     break;
