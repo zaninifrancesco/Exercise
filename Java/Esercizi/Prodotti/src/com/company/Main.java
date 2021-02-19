@@ -19,6 +19,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        NonAlimentari b = new NonAlimentari("dsadsa", 100, "fd");
+
+
         ListaSpesa lista = new ListaSpesa(5);   //Istanza della classe ListaSpesa
         int r = 0;
 
