@@ -18,7 +18,8 @@ public class Main {
                     "2. Aggiungi una auto\n" +
                     "3. Ritira un veicolo\n" +
                     "4. Vedi la lista del garage\n" +
-                    "5. Esci");
+                    "5. Vedi quanti soldi hai\n" +
+                    "6. Esci");
             r = scan.nextInt();
 
             switch (r){
@@ -82,7 +83,11 @@ public class Main {
                     break;
                 case 4:
                     g.showInfo();
+                    break;
+                case 5:
+                    System.out.println("Hai " + soldi + " euro");
+                    break;
             }
-        }while(r != 5);
+        }while(r != 6);
     }
 }
