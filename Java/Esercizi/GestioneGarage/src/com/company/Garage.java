@@ -57,7 +57,7 @@ public class Garage {
     public void showInfo(){
         if(nPosti != 0){
             for(int i = 0; i < nPosti; i++){
-                System.out.println("Costo Veicolo: "veicoli[i].costo + " Id: " + veicoli[i].id);
+                System.out.println("Costo Veicolo: " + veicoli[i].costo + " Id: " + veicoli[i].id);
             }
         }
         else{
