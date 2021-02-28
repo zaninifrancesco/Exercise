@@ -59,9 +59,6 @@ public class Main {
 
                     int index = g.trovaVeicolo(id);
 
-
-
-
                     System.out.println("Bisogna pagare: " + g.getVeicoli()[index - 1].costo);
                     System.out.println("1. Paga\n2. Non pagare");
                     int s = scan.nextInt();
