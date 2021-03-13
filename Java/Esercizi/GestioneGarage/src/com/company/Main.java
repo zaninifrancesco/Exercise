@@ -84,6 +84,7 @@ public class Main {
                 case 5:
                     System.out.println("Hai " + soldi + " euro");
                     break;
+
             }
         }while(r != 6);
     }

@@ -7,17 +7,17 @@ public class Veicolo {
     
     protected int costo;
     protected int ore;
-    protected int id;
+    protected int targa;
     
     public Veicolo(int orario, int id){
-        this.id = id;
+        this.targa = id;
         this.ore = orario;
     }
     
     public void calcolaCosto(){}
     
-    public int getId(){
-        return this.id;
+    public int getTarga(){
+        return this.targa;
     }
 
 }
