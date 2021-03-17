@@ -35,27 +35,17 @@ void in (vector<int> &a){
 int main(){
 
     vector<int> items = {5, 10, 20, 4, 2, 1};
-
-
-
-    if(find(items.begin(), items.end(), 0) != items.end()) {
-        cout << "BRUH";
-    }
-
-    /*
     cout << "Before" << endl;
 
     out(items);
 
-    items.pop_back(); //Remove the last elements from the back
+    //items.pop_back(); //Removes the last elements from the back
 
-    //items.erase(items.cbegin() + 1, items.cend()); //Remove elements from the index = 1 to the end
+    items.erase(items.cbegin() + 1, items.cend()); //Remove elements from the index = 1 to the end
 
     cout << "After" << endl;
 
     out(items);
-
-    */
 
     return 0;
 

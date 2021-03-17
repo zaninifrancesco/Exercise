@@ -24,7 +24,7 @@ public class Main {
 
             switch (r){
                 case 1:
-                    System.out.println("Id: ");
+                    System.out.println("Targa: ");
                     int id = scan.nextInt();
                     System.out.println("Quante ore si deve stare nel parcheggio: ");
                     int orario = scan.nextInt();
@@ -39,7 +39,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("Id: ");
+                    System.out.println("Targa: ");
                     id = scan.nextInt();
                     System.out.println("Quante ore si deve stare nel parcheggio: ");
                     orario = scan.nextInt();
@@ -54,7 +54,7 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("Indicare l'id del veicolo che si deve ritirare: ");
+                    System.out.println("Indicare la targa del veicolo che si deve ritirare: ");
                     id = scan.nextInt();
 
                     int index = g.trovaVeicolo(id);
