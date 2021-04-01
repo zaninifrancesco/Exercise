@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <sys/wait.h>
 
 int main(){
     
@@ -12,7 +11,7 @@ int main(){
     if(pid > 0){
         
         sleep(1);
-        printf("\n----Sono il ceo supremo (P1) il mio pid e': %d----\n\n", getpid());
+        printf("\n----Sono il padre di tutti (P1) il mio pid e': %d----\n\n", getpid());
 
         pid = fork();
 
