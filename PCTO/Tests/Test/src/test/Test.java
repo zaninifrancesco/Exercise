@@ -16,6 +16,11 @@ public class Test {
      */
     public static void main(String[] args) {
         
+        String en = "abcdef ghil mno";
+        
+        String a = en.split(" ")[2];
+        System.out.println(a);
+        
         
         
     }

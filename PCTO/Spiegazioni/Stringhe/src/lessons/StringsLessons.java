@@ -22,6 +22,9 @@ public class StringsLessons {
     
     public static void main(String[] args) {
           Scanner scan = new Scanner(System.in);
+          
+          
+         
 //        String bruh = "epico bruh";
 //        
 //        int index = bruh.indexOf("b");
@@ -76,7 +79,7 @@ public class StringsLessons {
 //        String a = tel1.substring(index + 1, tel1.length());
 //        
 //        System.out.println(a);
-//        
+
         
         System.out.println("Inserisci la mail: ");
         
