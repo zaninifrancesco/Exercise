@@ -5,6 +5,9 @@
  */
 package test;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author francesco
@@ -16,11 +19,30 @@ public class Test {
      */
     public static void main(String[] args) {
         
-        String en = "abcdef ghil mno";
+        List<Card> cards = new LinkedList<>();
         
-        String a = en.split(" ")[2];
-        System.out.println(a);
+        Card c = new Card("1", "69", 100);
+        Card c1 = new Card("2", "69", 100);
+        Card c2 = new Card("3", "69", 100);
+        Card c3 = new Card("4", "69", 100);
+        Card c4 = new Card("5", "69", 100);
         
+        System.out.println(c.toString());
+        
+        
+        cards.add(c);
+        cards.add(c1);
+        cards.add(c2);
+        cards.add(c3);
+        cards.add(c4);
+        
+        for (Card card : cards) {
+            System.out.println(card);
+        }
+        
+        if(cards.contains(new Card("5", "69", 100))){
+            System.out.println("\n\nCARD FOUND");
+        }
         
         
     }

@@ -10,6 +10,7 @@ int main(){
     pid = fork();
 
     if(pid > 0){
+        printf("\n\n-----PROCESSO PADRE P1-----\n");
         printf("Sono il padre P1 con pid: %d\n", getpid());
         
         wait(&status);
@@ -22,6 +23,7 @@ int main(){
 
         //F2
         if(pid == 0){
+            printf("\n\n---PROCESSO F2---\n");
             printf("Sono il secondo figlio F2 con pid: %d il pid di mio padre e' %d\n", getpid(), getppid());
 
             pid = fork();
@@ -29,6 +31,7 @@ int main(){
             wait(&status);
 
             if(pid == 0){
+                printf("\n\n---PROCESSO N22---\n");
                 printf("Sono il processo N22 con pid: %d il pid di mio padre e': %d\n", getpid(), getppid());
                 exit(22);
             }
@@ -42,6 +45,7 @@ int main(){
                 wait(&status);
 
                 if(pid == 0){
+                    printf("\n\n---PROCESSO N21---\n");
                     printf("Sono il processo N21 con pid: %d il pid di mio padre e': %d\n", getpid(), getppid());
                     exit(21);
                 }
@@ -56,6 +60,7 @@ int main(){
 
     }
     else if(pid == 0){
+        printf("\n\n---PROCESSO F1---\n");
         printf("Sono il figlio F1 con pid: %d e il pid di mio padre e': %d\n", getpid(), getppid());
               
         pid = fork();
@@ -65,6 +70,7 @@ int main(){
 
         //n11
         if(pid == 0){
+            printf("\n\n---PROCESSO N21---\n");
             printf("Sono il processo N11 con pid: %d e il pid di mio padre F1 e': %d\n", getpid(), getppid());
             exit(11);
         }
