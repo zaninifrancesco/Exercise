@@ -1,0 +1,6 @@
+.indexOf(): Indice di un valore
+.toUpperCase(): Tutta la stringa in maiuscolo
+.toLowerCase(): Tutta la stringa in minuscolo
+.split(val): divide la stringa e la mette in un array 
+di stringhe ogni volta che incontra il valore
+.mathches(Regex): vede se la regex è confermata
