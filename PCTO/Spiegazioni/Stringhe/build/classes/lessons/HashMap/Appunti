@@ -1,0 +1,8 @@
+Struttura dati con coppia di entry composte da chiavi e valori
+Data una chiave l'inserimento e riperimento di un valore avvengono
+in un unica operazione. (0(1)).
+
+
+    Generics (E)
+Map<Chiave, valore> map = new HashMap<>();
+
