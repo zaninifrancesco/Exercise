@@ -10,17 +10,18 @@ public class Test {
 
         UfficioPostale ufficio = new UfficioPostale(3);
 
-        ufficio.aggiungiSportelli(new Sportello("InvioPacchi", true));
-        ufficio.aggiungiSportelli(new Sportello("EstrattoConto", true));
-        ufficio.aggiungiSportelli(new Sportello("PagaBolletta", true));
+        ufficio.aggiungiSportelli(new Sportello("Invio Pacchi", true));
+        ufficio.aggiungiSportelli(new Sportello("Estratto Conto", true));
+        ufficio.aggiungiSportelli(new Sportello("Pagamento Bolletta", true));
+
 
         int r;
 
         do{
 
-            System.out.println("0. Nuovo cliente allo sportello <Invio Pacchi> n.0 APERTO: " + ufficio.getSportelli()[0].isAperto());
-            System.out.println("1. Nuovo cliente allo sportello <Estratto Conto> n.1 APERTO: " + ufficio.getSportelli()[1].isAperto());
-            System.out.println("2. Nuovo cliente allo sportello <Pagamento Bollette> n.2 APERTO: " + ufficio.getSportelli()[2].isAperto());
+            System.out.println("0. Nuovo cliente allo sportello <" + ufficio.getSportelli()[0].getTipo_sportello() + "> n.0 APERTO: " + ufficio.getSportelli()[0].isAperto());
+            System.out.println("1. Nuovo cliente allo sportello <<" + ufficio.getSportelli()[1].getTipo_sportello() + ">> n.1 APERTO: " + ufficio.getSportelli()[1].isAperto());
+            System.out.println("2. Nuovo cliente allo sportello <<" + ufficio.getSportelli()[2].getTipo_sportello() + ">> n.2 APERTO: " + ufficio.getSportelli()[2].isAperto());
 
             System.out.println("3. Servi un cliente");
             System.out.println("4. Vedi la lista dei clienti in uno sportello");
@@ -167,6 +168,4 @@ public class Test {
             uf.getSportelli()[0].rimuoviCliente();
         }
     }
-
-
 }

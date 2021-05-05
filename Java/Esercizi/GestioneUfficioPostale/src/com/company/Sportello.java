@@ -25,15 +25,6 @@ public class Sportello {
         }
     }
 
-
-    public String getTipo_sportello() {
-        return tipo_sportello;
-    }
-
-    public void setTipo_sportello(String tipo_sportello) {
-        this.tipo_sportello = tipo_sportello;
-    }
-
     public boolean isAperto() {
         return isAperto;
     }
@@ -69,5 +60,8 @@ public class Sportello {
         return true;
     }
 
+    public String getTipo_sportello() {
+        return tipo_sportello;
+    }
 
 }
