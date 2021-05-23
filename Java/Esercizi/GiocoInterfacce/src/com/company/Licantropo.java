@@ -1,10 +1,5 @@
 package com.company;
 
-
-
-
-
-
 public class Licantropo implements Mostro, Umano
 {
     private boolean isUomo;
@@ -19,8 +14,7 @@ public class Licantropo implements Mostro, Umano
     }
     public int getForza ()
     {
-        return
-                 forzaUmano +forzaMostro;
+        return forzaUmano +forzaMostro;
     }
     public void azzanna()
     { if (!isUomo) forzaMostro=forzaMostro-2;}
