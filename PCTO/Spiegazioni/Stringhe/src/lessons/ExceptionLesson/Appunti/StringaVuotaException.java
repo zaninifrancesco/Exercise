@@ -3,22 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package firstgui;
-
-import java.awt.*;
-import javax.swing.*;
+package lessons.ExceptionLesson.Appunti;
 
 /**
  *
  * @author francesco
  */
-public class FirstGUI {
+public class StringaVuotaException extends Exception{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-
+    public StringaVuotaException(String message) {
+        super(message);
     }
-
+    
+    
+    
 }

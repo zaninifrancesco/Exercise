@@ -3,7 +3,12 @@
 /PCTO/Tests/Test/dist/
 /Java/GUI/FirstGUI/nbproject/private/
 /Java/GUI/FirstGUI/build/
+<<<<<<< HEAD
 /Data Structures/Linked Lists/nbproject/private/
 /Data Structures/Linked Lists/build/
 /Java/GUI/ListaDellaSpesa/nbproject/private/
 /Java/GUI/ListaDellaSpesa/build/
+=======
+/Java/GUI/ProdotticonGUI/nbproject/private/
+/Java/GUI/ProdotticonGUI/build/
+>>>>>>> bde7e5372826bfd4df50e38c9ff90dae436fd807
